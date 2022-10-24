@@ -1,0 +1,580 @@
+
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+input{
+  border: none;
+  outline: none;
+  background: none;
+}
+hr{
+  border: none;
+  border: .02px solid rgba(209, 210, 210, 0.688);
+}
+
+
+// Login and Registration
+.login, .register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .loginCard, .registerCard{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .left{
+      padding: 2rem 1rem;
+      text-align: center;
+      color: white;
+      
+      h1{
+        font-size: 64px;
+        font-weight: 300;
+        line-height: 64px;
+      }
+      p{
+        color: teal;
+        background: rgba(248, 245, 245, 0.392);
+        backdrop-filter: blur(.2rem);
+        padding: 0.5rem;
+      }
+      
+    }
+    .right{
+      padding: 1rem;
+      h3{
+        text-decoration: underline;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        input{
+          height: 40px;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid teal;
+        }
+        button{
+          font-size: 18px;
+          height: 50px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.login{
+  background:linear-gradient(rgba(0, 255, 255, 0.372), rgba(19, 128, 0, 0.532)), url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600') center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  .loginCard{
+    .left{
+      flex: 3;
+      background:url('https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load') center;
+      background-size: cover;
+      
+      h1{
+        font-family: "Lobster", cursive;
+      }      
+    }
+    .right{
+      flex: 2;
+      padding: 1rem;
+      h3{
+        text-decoration: underline;
+      }
+      form{
+        button{
+          background: teal;
+        }
+      }
+    }
+  }
+}
+.register{
+  background:linear-gradient(rgba(0, 255, 255, 0.372), rgba(19, 128, 0, 0.532)), url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&w=600') center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  .registerCard{
+    flex-direction: row-reverse;
+
+    .left{
+      flex: 1;
+      background:url('https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=600') center;
+      background-size: cover;     
+    }
+    .right{
+      flex: 1;
+      padding: 1rem;
+      h3{
+        text-decoration: underline;
+        text-align: center;
+      }
+      form{
+        button{
+          background: gold;
+        }
+      }
+    }
+  }
+}
+
+// Navbar
+.navbar, .navLeft, .navRight, .icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.navbar{
+  height: 70px;
+  position: sticky;
+  top: 0;
+  padding: .5rem 4rem;
+  border-bottom: 1px solid lightgrey;
+  background: white;
+  z-index: 99;
+
+  .icons{
+    color: teal;
+    .icon{
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  .navLeft{
+    .logo{
+      font-family: 'Lobster', cursive;
+      font-size: 36px;
+      color: teal;
+    }
+    .icons{
+      .search{
+        display: flex;
+        align-items: center;
+        width: 500px;
+        height: 40px;
+        border: .002rem solid teal;
+        border-radius: 2rem;
+        overflow: hidden;
+        input{
+          width: 90%;
+          height: 40px;
+          font-size: 18px;
+          padding-right: 1rem;
+        }
+        .icon{
+          width: 10%;
+        }
+      }
+    }
+  }
+  .navRight{
+    .user{
+      display: flex;
+      align-items: center;
+      img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .icons{
+      position: relative;
+      .notify{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 3rem;
+        top: -.2rem;
+      }
+    }
+  }
+}
+
+//****Left Bar && Right Bar Combo *******
+.leftBar, .rightBar{
+  height: calc(100vh - 70px);
+  position: sticky;
+  top: 70px;
+  overflow: scroll;
+}
+// Left Bar 
+.leftBar{
+  flex: 2;
+  padding-left: 0.4rem;
+  padding-top: 1rem;
+  .leftItems{
+    padding-left: 1rem;
+    .items{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: .2rem;
+      img{
+        width: 30px;
+        height: 30px;
+      }
+      span{
+        color: #444;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Right Bar 
+.rightBar{
+  flex: 3;
+  padding: 1rem;
+  .activeUser, .suggestUser, .latestActivites{
+    box-shadow: -1px 2px 10px 5px rgba(146, 143, 143, 0.17);
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    p{
+      color: #666;
+      margin-top: 0;
+    }
+    div{
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: .2rem;
+      position: relative;
+      
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .online{
+        width: 16px;
+        height: 16px;
+        background: lime;
+        border-radius: 50%;
+        position: absolute;
+        top: 1px;
+        left:1.7rem;
+      }
+      span{
+        color: rgb(29, 47, 47);
+        cursor: pointer;
+        font-weight: 540;
+      }
+      .btns{
+        button{
+          padding: 0.2rem .5rem;
+          border-radius: .2rem;
+
+          &:first-child{
+            border:.01rem solid teal;
+            color: teal;
+          }
+          &:last-child{
+            border:.01rem solid crimson;
+            color: crimson;
+          }
+        }
+      }
+    }
+  }
+  .latestActivites{
+    div{
+      .nameAction{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: -12px;
+        span{
+          line-height: 10px;
+          &:last-child{
+            font-size: 12px;
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Home
+.home{
+  padding: 1rem;
+  .story{
+    margin-bottom: 1rem;
+    .container{
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+
+      .cardItem{
+        position: relative;
+        flex: 1;
+        height: 200px;
+        cursor: pointer;
+
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem ;
+          object-fit: cover;
+        }
+        span{
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+          color: white;
+        }
+      }
+    }
+  }
+  .postCard{
+    padding: 1rem;
+    .postItems{
+      position: relative;
+      padding: 1rem;
+      box-shadow: -1px 2px 10px 5px rgba(146, 143, 143, 0.17);
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+
+      .user{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        div{
+          span{
+            &:first-child{
+              font-weight: 600;
+            }
+            &:last-child{
+              font-size: 12px;
+              color: #777;
+            }
+          }
+          .icon{
+            position: absolute;
+            right: 2rem;
+            top: 1.5rem;
+            cursor: pointer;
+          }
+        }
+      }
+      img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// Profile
+.profile{
+  .images{
+    position: relative;
+    .coverImg{
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+    .profileImg{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: 200px;
+      left: 280px;
+    }
+  }
+  .bio{
+    position: relative;
+    margin:0 2rem;
+    padding: 1rem;
+    box-shadow: -1px 2px 10px 5px rgba(146, 143, 143, 0.17);
+
+    div{
+      font-size: 36px;
+      color: teal;
+      margin-top: 1rem;
+    }
+    p{
+      margin-top: 0;
+      font-style: italic;
+      text-align: center;
+      
+      span{
+        text-decoration: underline;
+        font-weight: 600;
+        color: rgb(6, 6, 150);
+        cursor: pointer;
+      }
+    }
+    button{
+      position: absolute;
+      top: 0.8rem;
+      right: 1rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    .unfollow{
+      border: .1rem solid crimson;
+      color: crimson;
+    }
+    .follow{
+      border: .1rem solid teal;
+      color: teal;
+    }
+  }
+}
+
+// Dark Theme
+.darkTheme{
+  background: #111;
+  color: white;
+  .navbar{
+    border-bottom: 1px solid rgb(91, 90, 90);
+  }
+  hr{
+    border: .001px solid rgb(49, 49, 49);
+  }
+  .activeUser, .latestActivites, .suggestUser, .leftBar .leftItems{
+    div{
+      span{
+        color:rgb(218, 214, 214)
+      }
+    }
+  }
+  .search{
+    input{
+      color: white;
+    }
+  }
+}
+
+
+// Mobile Responsiveness
+@media (max-width: 477px) {
+  .leftBar, .rightBar{
+    display: none;
+  }
+  .navbar{
+    padding:.2rem 1rem;
+    .icons{
+      font-size: 12px;
+      .icon{
+        &:first-child{
+          display: none;
+        }
+      }
+    }
+    .navLeft{
+      .logo{
+        font-size: 24px;
+      }
+      .icons{
+        .search{
+          display: none;
+        }
+      }
+    }
+    .navRight{
+      .user{
+        span{
+          display: none;
+        }
+      }
+    }
+  }
+  .home{
+    .story{
+      display: none;
+      .container{
+        .cardItem{
+          height: 100px;
+          width: 100px;
+          img{
+            border-radius: 50%;
+          }
+          .span{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .postItems{
+      .user{
+        div{
+          span{
+            &:last-child{
+              font-size: 8px;
+            }
+          }
+        }
+      }
+      p{
+        font-size: 14px;
+      }
+      img{
+        height: 200px;
+      }
+    }
+  }
+  .profile{
+    .images{
+      .coverImg{
+        height: 200px;
+      }
+      .profileImg{
+        top: 40%;
+        left: 30%;
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .bio{
+      margin: 0 0.5rem;
+      div{
+        font-size: 24px;
+        text-align: center;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
+}

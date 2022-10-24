@@ -4,7 +4,8 @@ import { Navbar, LeftBar, RightBar, Home, Login, Register, Profile } from './com
 import { useAuthContextApi } from './context/authContextApi';
 
 function App() {
-  const {currentUser, dark} = useAuthContextApi();
+  const {dark} = useAuthContextApi();
+  const currentUser = true;
 
   const Layout = ()=>{
     return(

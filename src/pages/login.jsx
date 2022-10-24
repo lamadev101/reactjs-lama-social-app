@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useAuthContextApi } from '../context/authContextApi'
 
 const Login = () => {
   const {UserLogin} = useAuthContextApi();
+  const navigate = useNavigate();
+  
   const handleLogin = () =>{
     UserLogin();
-    Navigate("/");
+    navigate("/");
   }
   return (
     <div className='login'>

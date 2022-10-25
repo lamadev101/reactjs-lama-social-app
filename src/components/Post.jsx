@@ -1,6 +1,6 @@
-import React from 'react'
 import { postDatas } from '../data'
 import {FiMoreHorizontal} from 'react-icons/fi';
+import ActionIcon from './ActionIcon';
 
 const Post = () => {
   return (
@@ -18,6 +18,7 @@ const Post = () => {
             </div>
             <p>{post.caption}</p>
             <img src={post.img} alt="" />
+            <ActionIcon/>
           </div>
         )
       })}

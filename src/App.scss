@@ -13,7 +13,60 @@ hr{
   border: none;
   border: .02px solid rgba(209, 210, 210, 0.688);
 }
+img{
+  object-fit: cover;
+}
 
+// Comments 
+.commentSection{
+  padding: 1rem;
+  .commentBoxs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    img{
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .box{
+      flex: 10;
+      display: flex;
+      align-items: center;
+      input{
+        width: 85%;
+        height: 45px;
+        outline: 1px solid teal;
+      }
+      button{
+        background: teal;
+        color: white;
+        height: 50px;
+        width: 15%;
+      }
+    }
+  }
+  .comments{
+    .user{
+      div{
+        display: flex;
+        flex-direction: column;
+        gap: -1rem;
+        span{
+          font-weight: 400 !important;
+        }
+      }
+    }
+    p{
+      margin-top: 0;
+      color: #444;
+      font-size: 14px;
+    }
+  }
+}
 
 // Login and Registration
 .login, .register{
@@ -272,13 +325,13 @@ hr{
         cursor: pointer;
       }
       .online{
-        width: 16px;
-        height: 16px;
-        background: lime;
+        width: 12px;
+        height: 12px;
+        background: limegreen;
         border-radius: 50%;
         position: absolute;
         top: 1px;
-        left:1.7rem;
+        left:2rem;
       }
       span{
         color: rgb(29, 47, 47);
@@ -395,9 +448,30 @@ hr{
         height: 300px;
         object-fit: cover;
       }
+      
     }
   }
 }
+
+// Action Icons
+.actionIcon{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  span{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .icon{
+      color: teal;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
 
 // Profile
 .profile{
@@ -484,6 +558,13 @@ hr{
       color: white;
     }
   }
+  .commentSection{
+    .comments{
+      p{
+        color: rgb(184, 182, 182)
+      }
+    }
+  }
 }
 
 
@@ -521,36 +602,43 @@ hr{
     }
   }
   .home{
+    padding: 0;
     .story{
-      display: none;
+      margin-top: 1rem;
       .container{
+        flex-wrap: wrap;
+        overflow: hidden;
         .cardItem{
-          height: 100px;
-          width: 100px;
+          height: 70px;
+          width: 80px;
           img{
             border-radius: 50%;
           }
-          .span{
-            font-size: 12px;
+          span{
+            font-size: 8px;
           }
         }
       }
     }
-    .postItems{
-      .user{
-        div{
-          span{
-            &:last-child{
-              font-size: 8px;
+    .postCard{
+      padding: 0;
+      .postItems{
+        padding:.5rem;
+        .user{
+          div{
+            span{
+              &:last-child{
+                font-size: 8px;
+              }
             }
           }
         }
-      }
-      p{
-        font-size: 14px;
-      }
-      img{
-        height: 200px;
+        p{
+          font-size: 14px;
+        }
+        img{
+          height: 200px;
+        }
       }
     }
   }
@@ -575,6 +663,13 @@ hr{
       p{
         font-size: 12px;
       }
+    }
+  }
+  .actionIcon{
+    justify-content: space-between;
+    span{
+      font-size: 12px;
+      padding: 0.5rem;
     }
   }
 }

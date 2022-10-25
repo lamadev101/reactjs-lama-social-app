@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { ActionIcon } from '../components';
 import { postDatas, userProfiles } from '../data';
 
 const Profile = () => {
@@ -41,6 +42,7 @@ const Profile = () => {
             </div>
             <p>{post.caption}</p>
             <img src={post.img} alt="" />
+            <ActionIcon/>
           </div>
         )
       })}

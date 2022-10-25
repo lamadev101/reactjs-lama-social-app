@@ -3,6 +3,7 @@ export {default as LeftBar} from './LeftBar';
 export {default as RightBar} from './RightBar';
 export {default as Comments} from './Comments';
 export {default as Post} from './Post';
+export {default as ActionIcon} from './ActionIcon';
 export {default as LeftBarItems} from './LeftBarItems';
 export {default as Stories} from './Stories';
 export {default as Home} from '../pages/home';

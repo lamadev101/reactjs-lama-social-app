@@ -24,7 +24,7 @@ const ActionIcon = () => {
         <span>{clickedShare ? 
         <HiOutlineShare className='icon' onClick={()=>setClickedShare(false)}/>:
         <HiShare className='icon' onClick={()=>setClickedShare(true)}/>}
-        20 Shares
+        {clickedShare ? "21" : "22"} Shares
         </span>
       </div>
       {!clickedComment && <Comments/>}

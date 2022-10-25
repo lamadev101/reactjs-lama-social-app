@@ -1,11 +1,19 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom'
+=======
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+>>>>>>> 2ca1405a73a6e6ef8adaea06732ec09ce4962c62
 import { useAuthContextApi } from '../context/authContextApi'
 
 const Login = () => {
   const {UserLogin} = useAuthContextApi();
   const navigate = useNavigate();
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 2ca1405a73a6e6ef8adaea06732ec09ce4962c62
   const handleLogin = () =>{
     UserLogin();
     navigate("/");
